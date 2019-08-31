@@ -12,6 +12,35 @@ const AppBox = styled.div `
   align-items: center;
 `;
 
+const PageButtons = styled.div`
+  display: flex;
+  width: 75%;
+  justify-content: flex-end;
+  align-items: center;
+  height: 25px;
+`;
+
+const ButtonPrevious = styled.button`
+  width: 25%;
+  border-radius: 5px;
+  background-color: white;
+  -webkit-box-shadow: 3px 5px 6px #c2b280;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 5px 6px #c2b280;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 5px 6px #c2b280;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  font-size: 15px;
+  margin-right: 125px;
+`;
+
+const ButtonNext = styled.button`
+  width: 25%;
+  border-radius: 5px;
+  background-color: white;
+  -webkit-box-shadow: 3px 5px 6px #c2b280;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 5px 6px #c2b280;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 5px 6px #c2b280;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  font-size: 15px;
+`;
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -42,21 +71,21 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <div className="PageButtons">
-        <button className="ButtonPreview" onClick={() => setPage(page - 1)}>Previous</button>
+      <PageButtons>
+        <ButtonPrevious onClick={() => setPage(page - 1)}>Previous</ButtonPrevious>
 
-        <button className="ButtonNext" onClick={() => setPage(page + 1)}>Next</button>
-      </div>
+        <ButtonNext onClick={() => setPage(page + 1)}>Next</ButtonNext>
+      </PageButtons>
       <AppBox>
         {data.map((starwars, index) => {
           return <Persons name={starwars.name} key={index}  height={starwars.height} birthday={starwars.birth_year} mass={starwars.mass} gender={starwars.gender}/>
         })}
       </AppBox>
-      <div className="PageButtons">
-        <button className="ButtonPreview" onClick={() => setPage(page - 1)}>Previous</button>
+      <PageButtons>
+        <ButtonPrevious onClick={() => setPage(page - 1)}>Previous</ButtonPrevious>
 
-        <button className="ButtonNext" onClick={() => setPage(page + 1)}>Next</button>
-      </div>
+        <ButtonNext onClick={() => setPage(page + 1)}>Next</ButtonNext>
+      </PageButtons>
     </div>
   );
 }

@@ -3,23 +3,24 @@ import './StarWars.css';
 import styled from 'styled-components';
 
 const StyledH2 = styled.h2`
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-decoration: underline;
   text-align: center;
 `;
 
 const StyleP = styled.p`
     color: lightgray;
+    font-size: 1.2rem;
 `;
 
 const Persons = (props) => {
     return (
         <div className="ContainerComp">
-          <StyledH2><h2>{props.name}</h2></StyledH2>
-          <StyleP><p>Gender: {props.gender}</p></StyleP>
-          <StyleP><p>Birth Year: {props.birthday}</p></StyleP>
-          <StyleP><p>Height: {props.height} cm</p></StyleP>
-          <StyleP><p>Weight: {props.mass} kg</p></StyleP>
+          <StyledH2>{props.name}</StyledH2>
+          <StyleP>Gender: {props.gender}</StyleP>
+          <StyleP>Birth Year: {props.birthday}</StyleP>
+          <StyleP>Height: {props.height} cm</StyleP>
+          <StyleP>Weight: {props.mass} kg</StyleP>
         </div>
     )
 }
