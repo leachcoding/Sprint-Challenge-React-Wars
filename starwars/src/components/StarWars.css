@@ -1,0 +1,13 @@
+.ContainerComp {
+  background-color: white;
+  border-radius: 20px;
+  width: 60%;
+  height: 25vh;
+  margin: 1vh 0rem 0rem 0rem;
+  -webkit-box-shadow: 3px 5px 6px #c2b280;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 5px 6px #c2b280;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 5px 6px #c2b280;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+.ContainerComp:last-child {
+  margin: 1vh 0rem 1vh 0rem;
+}
